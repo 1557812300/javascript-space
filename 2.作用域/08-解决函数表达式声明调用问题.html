@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 函数表达式调用必须写在函数声明的下面 -->
+    <script>
+        // 匿名函数(函数表达式方式):若我们把函数调用放在函数声明上面
+        // fn()
+        // var fn=function(){
+        //     console.log('22')  //报错
+        // }
+
+
+        //相当于执行了以下代码
+        var fn
+        fn()
+        var fn=function(){
+            console.log('2222')
+        }
+    </script>
+</body>
+</html>

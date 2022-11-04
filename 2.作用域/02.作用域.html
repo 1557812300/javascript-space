@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script type="text/javascript">
+        //函数每次执行都会开辟新的内存空间，当函数执行完毕之后，就会关闭这块空间，并且里
+        // 面的一些变量都会销毁
+        function fn(){
+            let n=3;
+            console.log(n)
+            // 作用域：变量的使用范围（环境）
+            // 全局作用域：函数外面的作用域
+            // 局部作用域： 函数内部作用域，在局部作用域定义的变量叫做局部变量，只能
+            // 在当函数中使用
+
+            // 变量：全部变量，局部变量
+        }
+        fn()
+
+        function counter(x,y){
+            //函数内部声明变量
+            let s=x+y;
+            console.log(s)  //18
+        }
+        // 设用counter函数
+        counter(10,8)
+        //外部访问变量s
+        console.log(s)
+        //报错
+    </script>
+</body>
+</html>

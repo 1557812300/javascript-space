@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    随机数
+    <script>
+    // 随机数
+    function getRandom(min,max){
+        return Math.floor(Math.random()*(max-min+1)+min)
+    }
+    //声明一个数组
+    let arr=['马超','赵云','黄忠','刘备','张飞','曹操','关羽']
+    //生成1一个随机数  作为数组的索引号
+    let num=getRandom(0,arr.length-1)
+    document.write(arr[num])
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //【常量必须要有值且不允许被重新赋值】
+        const version ='1.0.0';
+        // const version ='1.0.1';
+        //不能重新赋值
+
+        // 常量值为对象类型
+        const user={
+            name:'小明',
+            age:18
+        }
+
+        //不能重新赋值
+        // user={}
+
+        //属性与方法允许被修改
+        user.name='小小猫'
+        user.gender='牛牛牛'
+        console.log(user.gender)
+    </script>
+</body>
+</html>

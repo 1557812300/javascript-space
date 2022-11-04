@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. 事件源(谁) -->
+    <button class="btn">按钮</button>
+    <!-- 2. 事件类型(什么事件) -->
+    <!-- 3. 事件处理程序(做啥) -->
+</body>
+
+<script>
+    //点击有个按钮，弹出对话框
+    // 1.事件是有三部分组成  事件源  事件类型 时间处理程序  我们也称谓事件三要素
+    // （1）事件源 事件被触发的对象  谁  按钮
+    var btn = document.getElementsByClassName('btn')[0]
+    console.log(btn)
+        // (2)事件类型 如何触发 如鼠标点击（onclick） 还是鼠标经过
+        // (3)事件处理程序  通过一个函数赋值的方式 完成
+    btn.onclick = function() {
+        alert('唐伯虎，点秋香')
+    }
+</script>
+
+</html>

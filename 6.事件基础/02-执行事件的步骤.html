@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>执行事件的步骤</title>
+</head>
+<style>
+    .div1 {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    <div class="div1">
+        <!-- 执行事件的步骤 -->
+    </div>
+    <input type="text" placeholder="输入内容">
+</body>
+<script>
+    // 1. 获取事件源
+    var div = document.querySelector('div')
+    var input = document.getElementsByTagName('input')
+    console.log(div)
+    console.log(input)
+        // 2. 注册事件(绑定事件)
+        // div.onclick
+        // 3. 添加事件处理程序(采取函数赋值形式)
+    div.onclick = function() {
+        console.log('我被选中了')
+    }
+    div.onmouseover = function() {
+        console.log('鼠标经过了')
+    }
+    div.onmouseout = function() {
+        console.log('鼠标离开了')
+    }
+    input.onfocus() = function() {
+        console.log('获得鼠标焦点')
+    }
+</script>
+
+</html>

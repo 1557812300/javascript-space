@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块作用域</title>
+</head>
+<body>
+    <script>
+        {
+        let age=18;
+        console.log(age)//正常
+        // age只能在代码块中访问
+        }
+        //超出了age的作用域
+        // console.log(age) //报错
+        let flag=true;
+        if(flag){
+            //str只能在该代码中被访问问
+            let str='hello world!!'
+            console.log(str)//正常
+        }
+        //超出了flage作用域
+        // console.log(str) //出错
+
+        for(let t=1;t<=6;t++){
+            //t只能在改代码块中被访问
+            console.log(t) //正常
+        }
+        //当超出t的作用域
+        // console.log(t) //报错
+
+        
+
+
+    </script>
+</body>
+</html>

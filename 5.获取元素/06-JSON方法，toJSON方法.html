@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 假设我们有一个复杂的对象，我们希望将其转换为字符串，以通过网络发送，或者只是为了在日志中输出它。
+当然，这样的字符串应该包含所有重要的属性。 -->
+
+<body>
+
+</body>
+<script>
+    let user = {
+        name: 'json',
+        age: 30,
+        toString() {
+            return `{name:"${this.name}",age:${this.age}}`;
+        }
+    }
+    alert(user)
+
+    // JSON.stringify
+    // JSON是表示值和对象的通用格式。
+    // 客户端使用 JavaScript 而服务器端是使用 Ruby/PHP/Java 等语言编写的时，使用 JSON 可以很容易地进行数据交换。
+    // javascript中，提供了如下方法：
+    // JSON.stringify 将对象转为JSON
+    // JSON.parse 将JSON转回对象
+
+
+    let student = {
+        name: 'John',
+        age: 30,
+        isAdmin: false,
+        course: ['Chinese', 'English', 'Math'],
+        score: 33
+    }
+    let json = JSON.stringify(student)
+    alert(typeof json); //string
+    alert(JSON.stringify(100)) //100
+        //字符串在JSON中还是字符串，只是被双引号括起来了
+    alert(JSON.stringify('test')) //"test"
+    alert(JSON.stringify([1, 2, 3, 4])) //[1,2,3,4]
+
+    let user1 = {
+        sayHey() { // 被忽略
+            alert('你好！')
+        },
+        [Symbol("id")]: 123, // 被忽略
+        somthing: undefined //被忽略
+    }
+    alert(user1) //{} 空对象
+
+
+    let meet1 = {
+        title: '的点点滴滴',
+        room: {
+            number: 32,
+            fruit: ['apple', 'banana', 'orange', 'grape']
+        }
+    }
+    alert(JSON.stringify(meet1)) //全部字符串
+
+    // 部分转换
+    let meet2 = {
+        name: '李村大集',
+        pace: '河南庄附近',
+        time: '周六上午',
+    }
+    console.log(JSON.stringify(meet2, ['name', 'pace']))
+
+    // 将字符串在转换为原来
+    let user2 = JSON.parse(JSON.stringify(user));
+    console.log(user2)
+</script>
+
+</html>

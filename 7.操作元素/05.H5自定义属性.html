@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <!-- 自定义属性目的： -->
+<!-- - 保存并保存数据，有些数据可以保存到页面中而不用保存到数据库中 -->
+<!-- - 有些自定义属性很容易引起歧义，不容易判断到底是内置属性还是自定义的，所以H5有了规定 -->
+
+<!-- ### 1 设置H5自定义属性 -->
+<!-- H5规定自定义属性 `data-`开头作为属性名并赋值 -->
+    <div getTime="20" data-index="1" data-list-name="andy"></div>
+</body>
+<script>
+    var div=document.querySelector('div')
+    // var div=document.getElementsByTagName('div')
+    div.setAttribute('data-index','ddddd')
+    console.log(div.getAttribute('data-index'))
+    console.log(div.setAttribute('data-time',20))
+    console.log(div.getAttribute('data-list-name'))
+    console.log(div.dataset)
+    console.log(div.dataset.index)
+    console.log(div.dataset.listName)
+    console.log(div.dataset['listName'])
+</script>
+</html>

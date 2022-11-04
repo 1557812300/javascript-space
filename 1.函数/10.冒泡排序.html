@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //运用函数封装的方式，进行冒泡排序--降序
+        function moPao(arr1){
+            for(var i=0;i<arr1.length;i++){
+                for(var j=0;j<arr1.length;j++){
+                    if(arr1[j]<arr1[j+1]){
+                    var b=arr1[j+1]
+                    arr1[j+1]=arr1[j]
+                    arr1[j]=b
+                }
+                }
+            }
+            return arr1
+        }
+        var arr=[24,55,66,47,22,56,11,33,47]
+        console.log(moPao(arr))
+    </script>
+</body>
+</html>

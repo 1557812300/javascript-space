@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(var k in obj){
+            console.log(k)   //这里的K是域名
+            console.log(obj[k])  //这里的obj[k]是属性值
+        }
+
+        var obj={
+            name:'秦sir',
+            age:18,
+            sex:'男',
+            fn:function(){}
+        }
+        console.log(obj.name)
+        console.log(obj.age)
+        console.log(obj.sex)
+
+        // for in用于遍历对象
+        // for(变量 in 对象){}
+        // 我们使用for in 里面的变量 我们喜欢写k或者key
+        for(var k in obj){
+            console.log(k)
+            console.log(obj[k])
+        }
+    </script>
+</body>
+</html>

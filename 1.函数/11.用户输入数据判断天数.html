@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 用户输入年份，输出当前年份2月份的天数，
+        如果是闰年，则2月份是 29天， 如果是平年，则2月份是 28天
+     -->
+    <script>
+        var year=prompt('请用户输入年份：')
+        if(isRun(year)){
+            alert('您输入的是闰年'+year+'，2月份的日期29天')
+        }else {
+        alert('您输入的' + year + '不是闰年，2月份有28天');
+        }
+        function isRun(year){
+            var flag=false
+            if(year%4===0&&year%100!==0||year%400===0){
+                flag=true
+            }
+            return flag
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 变量预解析也叫做变量提升、函数提升 -->
+    <!-- 变量提升: 变量的声明会被提升到**当前作用域**的最上面，变量的赋值不会提升 -->
+    <script>
+        console.log(num)  //undefined
+        var num=999
+
+        // 相当于执行了如下代码
+        var num    //变量声明提升到当前作用域最上面
+        console.log(num)
+        num=10     // 变量的赋值不会提升
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 利用函数求任意个数的最大值
+        function maxNum(){
+            var max=arguments[0]
+            for(var i=0;i<arguments.length;i++){
+                if(max<arguments[i]){
+                    max=arguments[i]
+                }
+            }
+            return max
+        }
+        alert('最大值为：'+maxNum(1,2,3,55,5,86,3,44,7,6,55))
+    </script>
+</body>
+</html>

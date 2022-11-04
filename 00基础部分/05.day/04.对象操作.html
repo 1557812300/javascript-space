@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj={
+            uname:'小明',
+            age:18
+        }
+        console.log(obj.age)
+        obj.age=87
+        console.log(obj)
+        //添加新的属性值
+        obj.sex='男'
+        obj.sing=function(){
+            console.log('后会无期')
+        }
+        console.dir(obj)
+        //删除
+        delete obj.name
+        console.log(obj)
+    </script>
+</body>
+</html>

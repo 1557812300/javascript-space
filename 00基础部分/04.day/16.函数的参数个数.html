@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.实参个数少于形参  返回NaN
+        function fn1(x,y){
+            console.log(x+y)
+        }
+        fn1(1)
+        document.write(`<br/>`)
+        //2.实参个数大于形参  非诚勿扰
+        function fn(){
+            //arguments伪数组
+            // 伪数组 比真数组 少了一些 pop()  push()  等方法 
+            console.log(arguments)//[1,2,3]
+            let sum=0
+            for(let i=0;i<arguments;i++){
+                sum+=arguments[i]
+            }
+            console.log(x+y)
+        }
+        fn(1,2,3)
+    </script>
+
+</body>
+</html>

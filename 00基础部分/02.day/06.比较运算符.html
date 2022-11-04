@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('3>5:',3>5)//false
+        console.log('5>=5:',5>=5)//true
+        //==两边是否相等
+        //===两边值和类型是否相等
+        //!==左右两边是否不全等
+        console.log('5==5:',5==5)//true
+        //只要值是一样的就是true  不管数据类型
+        console.log("5=='5':",5=='5')//true
+        console.log("5=='pink':",5=='pink')//false
+
+        console.log('5===5:',5===5)//true
+        console.log("5==='5':",5==='5')//false
+        //特殊性情况
+        console.log("'pink'>'red':",'pink'>'red')//false
+        console.log("'pink'>'pin':",'pink'>'pin')//true
+        console.log("1===NaN:",1===NaN)//false
+        // console.log("NAN===NaN:",NAN===NaN)//报错
+        console.log(0.1+0.2)
+        console.log("0.1+0.2===0.3:",0.1+0.2===0.3)//false
+        console.log("'3'>2:",'3'>2)//true
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("作用域")
+        document.write(`<br/>`)
+        let num=0
+        console.log(11)
+        function fn(){
+            document.write('fn')
+            document.write(`<br/>`)
+            ff()
+            function ff(){
+                document.write('ff')
+                document.write(`<br/>`)
+            }
+        }
+        function fn1(){
+            document.write('fn1')
+        }
+        fn()
+        fn(ff())
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //定义一个获取数组最大数的函数
+        function getMaxNum(numArry) {
+            var MaxNum = numArry[0]
+            for (var i = 0; i < numArry.length; i++) {
+                if (numArry[i] > MaxNum) {
+                    MaxNum = numArry[i]
+                }
+            }
+            return MaxNum
+        }
+
+        var arrArry = [11,22,33,44,55,66,77,88]
+        var num = getMaxNum(arrArry)
+        alert('数组中最大值为：'+num)
+    </script>
+</body>
+
+</html>

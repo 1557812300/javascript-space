@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 得到两个数之间的随机数，并且包含这两个整数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min) + 1) + min
+        }
+        console.log(getRandom(1, 10)) //随机数
+
+        //随机点名
+        var arr = ['张三', '李四', '王五', '赵六']
+        console.log(arr[getRandom(0, arr.length - 1)])
+
+        //猜字谜游戏
+        // 程序随机生成一个1~10之间的数字，并让用户输入一个数字，
+        // 1.如果大于该数字，就提示，数字大了，继续猜：
+        // 2.如果小于该数字，就提示数字小了，继续猜：
+        // 3.如果等于该数字，就提示猜对了，结束程序。
+        function getRandom1(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        var randomNum = getRandom1(1, 10);
+        while (true) {
+            var num = prompt('请输入1~10之间的一个整数:');
+            if (num > randomNum) {
+                alert('大了')
+            } else if (num < randomNum) {
+                alert('小了')
+            } else {
+                alert('恭喜您，猜对了')
+                break; //退出整个系统
+            }
+        }
+    </script>
+</body>
+
+</html>

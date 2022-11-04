@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 前置自增和后置自增单独使用没有区别
+        // 前置自增
+        let i=1
+        let j=1
+        // 前置自增和后置自增如果参与运算就有区别：（难点）
+        //现自加，再使用 i+1+2
+        console.log(++i + 2)//4
+        console.log(i)
+        //先运算，再自加 i+2 i+1
+        console.log(j++ + 2)//3
+        console.log(j)
+
+    </script>
+</body>
+</html>

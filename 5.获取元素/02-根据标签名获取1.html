@@ -1,0 +1,34 @@
+<!-- 根据**标签名**获取，使用 `getElementByTagName()` 方法可以返回带有指定标签名的**对象的集合** -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>知否知否，应是等你好久</li>
+            <li>知否知否，应是等你好久</li>
+            <li>知否知否，应是等你好久</li>
+            <li>知否知否，应是等你好久</li>
+            <li>知否知否，应是等你好久</li>
+        </ul>
+    </div>
+    <script>
+        //1.返回的是获取过来的对象集合 以位数组的形式存储
+        var lis = document.getElementsByTagName('li')
+        console.log(lis)
+        console.log(lis[0], '------')
+            // 2.依次打印,遍历
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i])
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 利用for循环输出多少岁了
+        for(let i=0;i<=100;i++){
+            document.write(`我今年${i}岁了`)
+            document.write(`<br/>`)
+        }
+        // 2. 求 1~100 偶数的累加和
+        let sum=0
+        for(let i=0;i<=100;i++){
+            if(i%2===0){
+                sum+=i
+            }
+        }
+        document.write('累加偶数和：',sum)
+        document.write(`<br>`)
+        // 3. 页面打印5个小星星
+        for(let i=1;i<=5;i++){
+            document.write('⭐')
+        }
+        // 4. 循环的最大价值就是遍历数组
+        let arr = ['马超', '赵云', '张飞', '关羽', '黄忠', 'pink老师']
+        for(let i=0;i<arr.length;i++){
+            console.log(arr[i])
+            document.write(`输出名字是：${arr[i]}`)
+            document.write(`<br/>`)
+        }
+    </script>
+</body>
+</html>

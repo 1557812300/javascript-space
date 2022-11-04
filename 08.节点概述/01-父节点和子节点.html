@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 节点的优点 -->
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <div class="demo">
+        <div class="box">
+            <span class="erweima">×</span>
+        </div>
+    </div>
+
+    <script>
+        // 1. 父节点 parentNode
+        var erweima = document.querySelector('.erweima');
+        // var box = document.querySelector('.box');
+        // 得到的是离元素最近的父级节点(亲爸爸) 如果找不到父节点就返回为 null
+        console.log(erweima.parentNode) //返回父节点
+        var ul=document.querySelector('ul')
+        console.log(ul.childNodes) //返回子节点
+        
+
+        //DOM获取API方式
+        var ul=document.querySelector('ul')
+        var li=document.querySelector('li')
+
+        //子节点 childNodes 有的子节点 包含 元素节点 文本节点等等
+        console.log(ul.childNodes) //[text, li, text, li, text, li, text, li, text]
+        console.log(ul.childNodes[0].nodeType)  //3
+        console.log(ul.childNodes[1].nodeType)  //1
+
+        //第一个子结点
+        console.log(ul.firstChild)
+        //最后一个子结点
+        console.log(ul.lastChild)
+    </script>
+</body>
+</html>

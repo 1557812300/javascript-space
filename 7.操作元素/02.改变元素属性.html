@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(21, 199, 199);
+    }
+    .cccc{
+        background-color:blue
+    }
+</style>
+<body>
+    <div class="c1"></div>
+</body>
+<script>
+    var div=document.querySelector('div')
+    // div.style.backgroundColor="pink"
+    div.style.width = '250px';
+    div.onclick=function(){
+        this.className="cccc"
+    }
+</script>
+</html>

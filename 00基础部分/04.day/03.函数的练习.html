@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.求两数之和
+        function getSum(){
+            let num1=12
+            let num2=33
+            document.write(num1+num2)
+        }
+        getSum()
+
+        // 2.求1~100累加和  封装函数
+        function getSum1(){
+            let sum=0
+            for(let i=0;i<100;i++){
+                sum+=i
+            }
+        
+        document.write(`<br/>`)
+        document.write(sum)
+        }
+        getSum1()
+
+        //3.带参数的函数
+        function getSum2(num1,num2){
+            document.write(num1+num2)
+        }
+        //调用
+        document.write(`<br/>`)
+        getSum2(12,36)
+    </script>
+</body>
+</html>
