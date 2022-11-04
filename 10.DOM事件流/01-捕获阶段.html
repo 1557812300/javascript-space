@@ -6,10 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script></script>
+<style>
+    .father{
+        width: 200px;
+        height: 200px;
+        background-color: plum;
+    }
+    .son {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+    }
+</style>
 <body>
-    <div>
-        
+    <div class="father">
+        <div class="son">儿子盒子</div>
+<!-- // 4. 冒泡阶段 如果addEventListener 第三个参数是 false 或者 省略 那么则处于冒泡阶段
+        son -> father ->body -> html -> document -->
+        <script>
+             var son=document.querySelector('.son')
+             son.addEventListener('click',function(){
+                alert('son')
+             },false)
+             var father=document.querySelector('.father');
+             father.addEventListener('click',function(){
+                alert('father')
+                },false)
+            document.addEventListener('click',function(){
+             alert('document')
+            })
+        </script>
     </div>
 </body>
 </html>

@@ -4472,7 +4472,6 @@ eventTarget.addEventListener('click', function(event) {
         // 5. 事件对象也有兼容性问题 ie 通过 window.event 兼容性的写法  e = e || window.event;
     </script>
 </body>
-1920
 ```
 
 ### 7.4.1、事件对象的兼容性方案
@@ -4486,7 +4485,6 @@ eventTarget.addEventListener('click', function(event) {
 
 ```js
 e = e || window.event;
-1
 ```
 
 ### 7.4.2、事件对象的常见属性和方法
@@ -4544,7 +4542,6 @@ e.target 和 this 的区别：
         }
     </script>
 </body>
-1920212223242526272829303132333435
 ```
 
 ## 7.6、阻止事件冒泡
@@ -4557,14 +4554,12 @@ e.target 和 this 的区别：
 
 ```js
 e.stopPropagation();
-1
 ```
 
 - 非标准写法： IE6-8 利用对象事件 cancelBubble属性
 
 ```js
 e.cancelBubble = true;
-1
 <body>
     <div class="father">
         <div class="son">son儿子</div>
@@ -4779,7 +4774,6 @@ if(e && e.stopPropagation){
         })
     </script>
 </body>
-192021
 ```
 
 ## 7.9、常用的键盘事件
@@ -4885,14 +4879,12 @@ if(e && e.stopPropagation){
 class name {
     // class body
 }
-123
 ```
 
 - 创建实例
 
 ```js
 var XX = new name();
-1
 ```
 
 注意：类必须使用`new` 实例化对象
@@ -4918,7 +4910,6 @@ constructor() 方法是类的构造函数(默认方法)，用于传递参数,返
     console.log(ldh);
     console.log(zxy);
 </script>
-141516
 ```
 
 - 通过 class 关键字创建类，类名我们还是习惯性**定义首字母大写**

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .father{
+        width: 200px;
+        height: 200px;
+        background-color: plum;
+    }
+    .son {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <!-- 事件冒泡：开始时由最具体的元素接收，然后逐级向上传播到到 DOM 最顶层节点 -->
+    <!-- 事件冒泡本身的特性，会带来的坏处，也会带来的好处，需要我们灵活掌握。 -->
+    <div class="father">
+        <div class="son">son</div>
+    </div>
+</body>
+<script src="">
+    var son =document.querySelector('.son') 
+    son.addEventListener('click',function(e){
+        alert('son')
+        e.stopPropagation()  //stop停止 Propagation 传播
+        e.cancelBubble=true  //非标准的cancel取消 bubble泡泡
+    },false)
+
+    var father=document.querySelector('.father')
+    ul.addEventListener('click',function(e){
+        //我们给ul 绑定了事件 那么this 指向ul
+        console.log(this)
+        console.log(e.currentTraget)
+
+        //e.target  指向我们所点击的那个对象  谁触发了这个事件 我们点击的是li.e.target 指向的是li
+        console.log(e.target);
+        // 了解兼容性
+            // div.onclick = function(e) {
+            //     e = e || window.event;
+            //     var target = e.target || e.srcElement;
+            //     console.log(target);
+
+        // }
+        // 2. 了解 跟 this 有个非常相似的属性 currentTarget  ie不认识
+    })
+</script>
+</html>
